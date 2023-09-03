@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: rgb(6, 9, 23);
     color: #fff;
@@ -391,7 +394,7 @@ margin: 10px 0;
     background-color: #9bebeb;
 }
 .contact-right form{
-    width: 120%;
+    width: 100%;
 }
 form input, form textarea{
     width: 100%;
@@ -420,15 +423,13 @@ form .btn2{
     color: #ff004f;
 }
 
-
+ nav .fa{
+    display: none;
+}
 
 /* -----------css for small screes ----------- */
-.nav-link i{
-    display: none;
-}
-i{
-    display: none;
-}
+
+
 
 @media only screen and (max-width: 600px){
     
@@ -436,8 +437,70 @@ i{
         background-image: url(images/ankita.png);
     }
     
+    .logo h1{
+        display: block;
+    }
+   
+   nav .fa{
+    display: block;
+    font-size: 25px;
+   }
+    nav ul{
+        background-color: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -210px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+    }
+
+   
+    nav  ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 10px 10px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff;
+        position: relative;
+    }
+    nav ul li a::after{
+        content: '';
+        width: 0%;
+        height: 3px;
+        background-color: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition-duration: 0.5s;
+    }
+    nav ul li a:hover::after{
+        cursor: pointer;
+        width: 100%;
+        display: inline-block;
+    }
+
+
+
     .header-text{
-        margin-top: 100%;
+        margin-top: 80%;
         font-size: 1.2rem;
     }
     .header-text h1{
@@ -448,24 +511,6 @@ i{
         color: #ff004f;
         float:inline-start;
     }
-    nav .logo{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
-        background-color: #ff004f;
-        position:fixed;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 100vh;
-        padding: 15px;
-    }
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
