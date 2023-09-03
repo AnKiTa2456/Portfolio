@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -18,21 +19,21 @@
               <div class="logo">
                 <h1>Ankita's Portfolio</h1></div>
                 <div>
-                <ul class="nav-link">
-                   <li><a href="#">Home</a></li>
-                   <li><a href="#">About</a></li>
-                   <li><a href="#">Portfolio</a></li>
-                   <li><a href="#">Services</a></li>
-                   <li><a href="#">Contact me</a></li>
-                   <i class="fas fa-times"></i>
+                <ul class="sidemenu">
+                   <li><a href="#header">Home</a></li>
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#myskills">Portfolio</a></li>
+                   <li><a href="#portfolio">Services</a></li>
+                   <li><a href="#contact">Contact me</a></li>
+                   <i class="fa fa-close" onclick="closemenu()"></i>
                 </ul>
-                <i class="fas fa-bars"></i>
+                <i class="fa fa-list-ul" onclick="openmenu()"></i>
                 
                 </div>
             </nav>
             <div class="header-text">
                 <p>FullStack Web Developer with MERN</p>
-                <h1>Hello, I'm <span>Ankita</span><br> from India</h1>
+                <h1>Hello, I'm <span>Ankita</span><br> from Lucknow</h1>
             </div>
         </div>
     </div>
@@ -124,11 +125,9 @@
               <img src="images/React.png"  alt="hibernate-image">
           </div>
       </div>
-  </div>
-</div>
-    <div id="services">
-      <div class="container">
-        <h1 class="sub-title">My Expertise:</h1>
+
+
+        <h1 class="sub-title">My Expertise :</h1>
           <div class="services-list">
             <div>
               <i class="fa fa-code"></i>
@@ -149,9 +148,8 @@
               <h3>FullStack Developer</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequatur?</p>
               <a href="#">Learn more</a></div>
-              </div>
             </div>
-          </div>
+          
       </div>
     </div>
 
@@ -194,19 +192,43 @@
     <!-- my work end-->
 
 <!----------------footer--------------->
-    <div class="footer" style="color: antiquewhite;">
-        <div class="container">
-          <div class="footer-sect social-icon width-50">
-            <a href="#"><i class="fa fa-facebook"></i></a> 
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/ankita-patel-859508220"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            
-          </div>
-          <div class="footer-sect mt-20 width-50">CopyRight @ 2023 ankitasingh.com Portfolio Developer By:<span>Ankita Patel</span></div>
-          
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left" data-aos="fade-down-right">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i>patelankita24082000@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i>+91 9506378421</p>
+                <div class="footer-sect social-icon width-50">
+                    <a href="https://www.facebook.com/profile.php?id=100058904483358" target="_blank"><i class="fa fa-facebook"></i></a> 
+                    <a href="https://github.com/AnKiTa2456?tab=repositories" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ankita-patel-859508220" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/imankita.3/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    
+                  </div>
+                <a data-aos="zoom-out-left" href="images/Patel (2) (1).pdf" download class="button btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right" data-aos="fade-down-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="EMail" placeholder="Your Email" required>
+                    <textarea name="Message"  cols="20" rows="6" placeholder="Message"></textarea>
+                    <button type="submit" class="button btn2 " > Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+            <div class="copyright">
+                
+                <p id="copy"><i class="fa-regular fa-copyright"></i>  2023 Copyright: Portfolio
+                    Developed By: <span>Ankita Patel</span></p>
+
+            </div>
         </div>
-      </div>
+    </div>
+    
+ </div>
 
       <script src="script.js"></script>
 
